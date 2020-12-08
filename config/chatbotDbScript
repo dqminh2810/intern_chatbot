@@ -1,0 +1,119 @@
+CREATE DATABASE chatbotDb;
+
+use chatbotDb;
+
+CREATE TABLE  IF NOT EXISTS  `stages`(
+  `id` BIGINT UNSIGNED AUTO_INCREMENT,
+  `typesDeStages` VARCHAR(255) NOT NULL,
+  `dureeMinStage` INTEGER (2), #NUMBER OF WEEKS
+  `dureeMaxStage` INTEGER (2), #NUMBER OF WEEKS
+  `dateDebutMinStage` DATE NOT NULL,
+  `dateDebutMaxStage` DATE NOT NULL,
+  `dateFinMinStage` DATE NOT NULL,
+  `dateFinMaxStage` DATE NOT NULL,
+
+  #
+  `anneeScolaire` VARCHAR(10),
+  `debut` NUMBER(4) NOT NULL,
+  `fin` NUMBER(4) NOT NULL,
+  #
+  `dateRenduRapportStage` DATE,
+  `dateRenduRapportIntermediaireStage` DATE,
+  `consigneRapport` VARCHAR(255) NOT NULL,
+  `emplacementRenduRapport` VARCHAR(255) NOT NULL,
+  `emplacementRenduRapportIntermediaire` VARCHAR(255) NOT NULL,
+  ##
+
+  ##
+  `lienSlidePresentationStage` VARCHAR(255) NOT NULL,
+  *`procedureSignatureConvention` VARCHAR(255) NOT NULL, ##
+  *`procedureValidationSujetStage` VARCHAR(255) NOT NULL, ##
+  `actionsAfaireAlaFinDuStage` VARCHAR(255) NOT NULL, ##
+  *`rdvPourSignatureConvention` VARCHAR(255) NOT NULL, ##
+  `coupureStage` VARCHAR(255) NOT NULL, ##
+  `stageDansUnLaboratoire` VARCHAR(255) NOT NULL, ##
+  *`numeroArenseignerPourLesConventions` VARCHAR(15) NOT NULL, ##
+  `stageEtConvention` VARCHAR(100) NOT NULL, ##
+  `validationStageParCDD` VARCHAR(255) NOT NULL, ##
+  *`contactLorsqueLeStageSePasseMal` VARCHAR(100) NOT NULL, ##
+  `stageEtProjetPersonnel` VARCHAR(255) NOT NULL, ##
+  `stageEtFreelance` VARCHAR(255) NOT NULL, ##
+  `stageEtTeletravail` VARCHAR(255) NOT NULL, ##
+  `stageNonInformatique` VARCHAR(255) NOT NULL, ##
+  `stageEtMineure` VARCHAR(255) NOT NULL, ##
+  `stageEtEtranger` VARCHAR(255) NOT NULL, ##
+  `stageEtMonaco` VARCHAR(255) NOT NULL, ##
+  `soutenance` VARCHAR(100) NOT NULL, ##
+
+  ##
+
+  `responsableStage` VARCHAR(100) NOT NULL,
+  `signataireConvention` VARCHAR(100) NOT NULL,
+
+  `is_deleted` TINYINT UNSIGNED DEFAULT 0,
+  `created_at` DATETIME NOT NULL,
+  `updated_at` DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+
+  PRIMARY KEY (`id`)
+
+  )
+
+ENGINE = InnoDB;
+
+
+### Script V2
+
+CREATE DATABASE chatbotDb;
+
+use chatbotDb;
+
+CREATE TABLE  IF NOT EXISTS  `stages`(
+  `id` BIGINT UNSIGNED AUTO_INCREMENT,
+  `anneeScolaire` VARCHAR(255) NOT NULL,
+  `typesDeStages` VARCHAR(255) NOT NULL,
+  `dureeMinStage` INTEGER (2), #NUMBER OF WEEKS
+  `dureeMaxStage` INTEGER (2), #NUMBER OF WEEKS
+  `dateDebutMinStage` DATE NOT NULL,
+  `dateDebutMaxStage` DATE NOT NULL,
+  `dateFinMinStage` DATE NOT NULL,
+  `dateFinMaxStage` DATE NOT NULL,
+
+  #`anneeScolaire` VARCHAR(10) NOT NULL,
+  #
+  `dateRenduRapportStage` DATE,
+  `dateRenduRapportIntermediaireStage` DATE,
+  `consigneRapport` VARCHAR(255) NOT NULL,
+  `emplacementRenduRapport` VARCHAR(255) NOT NULL,
+  `emplacementRenduRapportIntermediaire` VARCHAR(255) NOT NULL,
+  ##
+
+  ##
+  `lienSlidePresentationStage` VARCHAR(255) NOT NULL,
+  `procedureSignatureConvention` VARCHAR(255) NOT NULL,
+  `procedureValidationSujetStage` VARCHAR(255) NOT NULL,
+  `actionsAfaireAlaFinDuStage` VARCHAR(255) NOT NULL,
+  `rdvPourSignatureConvention` VARCHAR(255) NOT NULL,
+  `coupureStage` VARCHAR(255) NOT NULL,
+  `stageDansUnLaboratoire` VARCHAR(255) NOT NULL,
+  `numeroArenseignerPourLesConventions` VARCHAR(15) NOT NULL,
+  `stageEtConvention` VARCHAR(100) NOT NULL,
+  `validationStageParCDD` VARCHAR(255) NOT NULL,
+  `contactLorsqueLeStageSePasseMal` VARCHAR(100) NOT NULL,
+  `stageEtProjetPersonnel` VARCHAR(255) NOT NULL,
+  `stageEtFreelance` VARCHAR(255) NOT NULL,
+  `stageEtTeletravail` VARCHAR(255) NOT NULL,
+  `stageNonInformatique` VARCHAR(255) NOT NULL,
+  `stageEtMineure` VARCHAR(255) NOT NULL,
+  `soutenance` VARCHAR(100) NOT NULL,
+
+  ##
+
+  `responsableStage` VARCHAR(100) NOT NULL,
+  `signataireConvention` VARCHAR(100) NOT NULL,
+  `is_deleted` TINYINT UNSIGNED DEFAULT 0,
+  `created_at` DATETIME NOT NULL,
+  `updated_at` DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+  );
+
+ENGINE = InnoDB;

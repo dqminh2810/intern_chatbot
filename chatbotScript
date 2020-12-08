@@ -1,0 +1,61 @@
+CREATE DATABASE chatbotDb;
+
+use chatbotDb;
+
+CREATE TABLE  IF NOT EXISTS  `anneeScolaires`(
+  `id` BIGINT UNSIGNED AUTO_INCREMENT,
+  `debut` INTEGER(4) UNSIGNED,
+  `fin` INTEGER(4) UNSIGNED,
+  `typesDeStages` VARCHAR(255) NOT NULL,
+  `dureeMinStage` INTEGER (2), #NUMBER OF WEEKS
+  `dureeMaxStage` INTEGER (2), #NUMBER OF WEEKS
+  `dateDebutMinStage` DATE NOT NULL,
+  `dateDebutMaxStage` DATE NOT NULL,
+  `dateFinMinStage` DATE NOT NULL,
+  `dateFinMaxStage` DATE NOT NULL,
+  `responsableStage` VARCHAR(100) NOT NULL,
+  `signataireConvention` VARCHAR(100) NOT NULL,
+  `is_deleted` TINYINT UNSIGNED DEFAULT 0,
+  `created_at` DATETIME NOT NULL,
+  `updated_at` DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+  );
+
+CREATE TABLE IF NOT EXISTS  `procedures` (
+  `id` BIGINT UNSIGNED AUTO_INCREMENT,
+  `anneeScolaire` BIGINT UNSIGNED,
+  `titre` VARCHAR (100) NOT NULL,
+  `procedureDetaillee` VARCHAR (255) NOT NULL,
+  `is_deleted` TINYINT UNSIGNED DEFAULT 0,
+  `created_at` DATETIME NOT NULL,
+  `updated_at` DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  FOREIGN KEY (`anneeScolaire`) REFERENCES `anneeScolaires`(`id`),
+  PRIMARY KEY (`id`)
+  );
+
+CREATE TABLE IF NOT EXISTS  `liens` (
+  `id` BIGINT UNSIGNED AUTO_INCREMENT,
+  `anneeScolaire` BIGINT UNSIGNED,
+  `titre` VARCHAR (100) NOT NULL,
+  `url` VARCHAR (255) NOT NULL,
+  `emplacement` VARCHAR (75) NOT NULL,
+  `is_deleted` TINYINT UNSIGNED DEFAULT 0,
+  `created_at` DATETIME NOT NULL,
+  `updated_at` DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  FOREIGN KEY (`anneeScolaire`) REFERENCES `anneeScolaires`(`id`),
+  PRIMARY KEY (`id`)
+  );
+
+  CREATE TABLE IF NOT EXISTS  `questions` (
+  `id` BIGINT UNSIGNED AUTO_INCREMENT,
+  `anneeScolaire` BIGINT UNSIGNED,
+  `question` VARCHAR (255) NOT NULL,
+  `reponse` VARCHAR (255) NOT NULL,
+  `is_deleted` TINYINT UNSIGNED DEFAULT 0,
+  `created_at` DATETIME NOT NULL,
+  `updated_at` DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  FOREIGN KEY (`anneeScolaire`) REFERENCES `anneeScolaires`(`id`),
+  PRIMARY KEY (`id`)
+  )
+
+ENGINE = InnoDB;

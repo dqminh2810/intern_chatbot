@@ -1,0 +1,151 @@
+
+   
+   <form action="" method="POST" enctype="multipart/form-data">
+
+    <fieldset>
+
+        <legend>CHATBOT - STAGE SI4</legend>
+        
+        <input type="text" id="anneeScolaire" name="anneeScolaire" readonly> <br></br>
+    
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+
+        <legend>DATE DE DEBUT</legend>
+        
+        <label for="dateDebutMinStage" >au plus tôt</label>
+        <input type="date" id="dateDebutMinStage" name="dateDebutMinStage" readonly><br><br>
+
+        <label for="dateDebutMaxStage" >au plus tard</label>
+        <input type="date" id="dateDebutMaxStage" name="dateDebutMaxStage" readonly><br><br>
+    
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+
+        <legend>DATE DE FIN</legend>
+        
+        <label for="dateFinMinStage" >au plus tôt</label>
+        <input type="date" id="dateFinMinStage" name="dateFinMinStage" readonly><br><br>
+
+        <label for="dateFinmaxStage" >au plus tard</label>
+        <input type="date" id="dateFinMaxStage" name="dateFinMaxStage" readonly><br><br>
+    
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+
+        <legend>RAPPORT</legend>
+        
+        <label for="dateRenduRapportStage" >Date de rendu du rapport</label>
+        <input type="date" id="dateRenduRapportStage" name="dateRenduRapportStage" readonly><br><br>
+
+        <label for="dateRenduRapportIntermediaireStage" >Date de rendu du rapport intermédiaire</label>
+        <input type="date" id="dateRenduRapportIntermediaireStage" name="dateRenduRapportIntermediaireStage" readonly><br><br>
+
+        <label for="consigneRapport" >Consignes sur le rapport</label>
+        <textarea type="text" id="consigneRapport" name="consigneRapport" readonly></textarea><br><br>
+
+        <label for="emplacementRenduRapport" >Emplacement du rendu du rapport</label>
+        <input type="text" id="emplacementRenduRapport" name="emplacementRenduRapport" readonly><br><br>
+
+        <label for="emplacementRenduRapportIntermediaire" >emplacement du rendu du rapport intermédiaire</label>
+        <input type="text" id="emplacementRenduRapport" name="emplacementRenduRapportIntermediaire" readonly><br><br>
+    
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+
+        <legend>INFORMATIONS ADMINISTRATIVES</legend>
+
+        <label for="responsableStage" >Responsable des stages</label>
+        <input type="text" id="responsableStage" name="responsableStage" readonly><br><br>
+
+        <label for="signataireConvention" >Responsable de la signature des conventions</label>
+        <input type="text" id="signataireConvention" name="signataireConvention" readonly><br><br>
+        
+        <label for="procedureSignatureConvention" >Procédure pour la signature d'un convention</label>
+        <textarea type="text" id="procedureSignatureConvention" name="procedureSignatureConvention" readonly></textarea><br><br>
+
+        <label for="procedureValidationSujetStage" >Procédure pour la validation du sujet de stage</label>
+        <textarea type="text" id="procedureValidationSujetStage" name="procedureValidationSujetStage" readonly></textarea><br><br>
+
+        <label for="rdvPourSignatureConvention" > Rendez-vous pour la signature d'une convention</label>
+        <textarea type="text" id="rdvPourSignatureConvention" name="rdvPourSignatureConvention" readonly></textarea><br><br>
+
+        <label for="numeroArenseignerPourLesConventions" >Numéro de téléphone à renseigner sur les conventions</label>
+        <input type="text" id="numeroArenseignerPourLesConventions" name="numeroArenseignerPourLesConventions" readonly><br><br>
+
+        <label for="contactLorsqueLeStageSePasseMal" >Que faire lorsque les conditions de stage ne sont pas bonnes?</label>
+        <textarea type="text" id="contactLorsqueLeStageSePasseMal" name="emplacementRenduRapportIntermediaire" readonly></textarea><br><br>
+    
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+
+        <legend>INFORMATIONS GENERALES</legend>
+
+    
+        <label for="typesDeStages">TYPES DE STAGE AUTORISES</label>
+        <textarea id="typesDeStages" name="typesDeStages" readonly></textarea> <br><br>
+
+
+        <label for="stageEtConvention" > Peut on commencer son stage sans avoir signer sa convention?</label>
+        <textarea type="text" id="stageEtConvention" name="stageEtConvention" readonly></textarea><br><br>
+
+        <label for="lienSlidePresentationStage" >Lien vers les slides de présentation du stage SI4</label>
+        <textarea type="text" id="lienSlidePresentationStage" name="lienSlidePresentationStage" readonly></textarea><br><br>
+
+        <label for="actionsAfaireAlaFinDuStage" >Ce qu'il faut faire après avoir terminer son stage</label>
+        <textarea type="text" id="actionsAfaireAlaFinDuStage" name="actionsAfaireAlaFinDuStage" readonly></textarea><br><br>
+        
+        <label for="coupureStage" >Est-il possible d'avoir une coupure durant le stage SI4?</label>
+        <textarea type="text" id="coupureStage" name="coupureStage" readonly></textarea><br><br>
+
+        <label for="stageDansUnLaboratoire" >Un stage dans un laboratoire de recherche est il valable?</label>
+        <textarea type="text" id="stageDansUnLaboratoire" name="stageDansUnLaboratoire" readonly></textarea><br><br>
+
+        <label for="stageEtProjetPersonnel" >Est-il possible de réaliset un projet personnel pour valider le stage Si4?</label>
+        <textarea type="text" id="stageEtProjetPersonnel" name="stageEtProjetPersonnel" readonly></textarea><br><br>
+
+        <label for="stageEtFreelance" >Les Freelance sont elles valables?</label>
+        <textarea type="text" id="stageEtFreelance" name="stageEtFreelance" readonly></textarea><br><br>
+
+        <label for="stageNonInformatique" >Un stage non informatique est-il permis? (caissier à LIDL par exemple)</label>
+        <textarea type="text" id="stageNonInformatique" name="stageNonInformatique" readonly></textarea><br><br>
+    
+        <label for="stageEtMineure" >Le stage SI4 doit il être obligatoirement lié à la mineure choisie pour la SI5?</label>
+        <textarea type="text" id="stageEtMineure" name="stageEtMineure" readonly></textarea><br><br>
+
+        <label for="stageEtEtranger" >Peut-on faire un stage à l'étranger? Si oui comptera-il comme expérience à l'étranger?</label>
+        <textarea type="text" id="stageEtEtranger" name="stageEtEtranger" readonly></textarea><br><br>
+
+        <label for="stageEtMonaco" >Un stage à Monaco est-il considéré comme stage à l'étranger?</label>
+        <textarea type="text" id="stageEtMonaco" name="stageEtMonaco" readonly></textarea><br><br>
+
+        <label for="soutenance" >Est-ce qui'il y aura des soutenances?</label>
+        <textarea type="text" id="soutenance" name="soutenance" readonly></textarea><br><br>
+            
+        
+    </fieldset>
+
+    <div style="text-align: center;">
+        <button type="submit">ENREGISTRER</button>            
+    </div>
+
+</form>
+
+</body>
+
+</html>

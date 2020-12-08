@@ -1,0 +1,59 @@
+{
+  "name": "chatbot-backend-2020",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "./node_modules/.bin/nodemon app/index.js",
+    "lint": "./node_modules/.bin/eslint -c .eslintrc.js app/",
+    "lint:fix": "./node_modules/.bin/eslint -c .eslintrc.js app/ --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/delmotte/back-end-starter-3a-pns-2019.git",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/delmotte/back-end-starter-3a-pns-2019/issues"
+  },
+  "homepage": "https://github.com/delmotte/back-end-starter-3a-pns-2019#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "2.8.5",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.0",
+    "mysql": "^2.18.1",
+    "req-flash": "0.0.3",
+    "joi": "14.3.1",
+    "morgan": "1.9.1"
+  },
+  "devDependencies": {
+    "eslint": "5.13.0",
+    "eslint-config-airbnb-base": "13.1.0",
+    "eslint-plugin-import": "2.16.0",
+    "nodemon": "1.18.10",
+    "pre-commit": "1.2.2"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "mocks/*"
+    ],
+    "dependencies": {
+      "body-parser": "^1.19.0",
+      "ejs": "^3.1.5",
+      "express": "^4.17.1",
+      "express-fileupload": "^1.2.0",
+      "mysql": "^2.18.1",
+      "req-flash": "0.0.3"
+    },
+    "devDependencies": {
+      "nodemon": "^2.0.4"
+    }
+  }
+}

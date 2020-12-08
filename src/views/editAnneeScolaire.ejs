@@ -1,0 +1,59 @@
+
+   
+   <form action="" method="POST" enctype="multipart/form-data">
+
+        <fieldset>
+
+            <legend>ANNEE SCOLAIRE</legend>
+            
+            <input type="number" id="debut" name="debut" required> <p>-</p>
+            <input type="number" id="fin" name="fin" required><br><br>
+        
+        </fieldset>
+
+        <fieldset>
+
+            <legend>DATE DE DEBUT</legend>
+            
+            <label for="dateDebutMin" >au plus tôt</label>
+            <input type="date" id="dateDebutMin" name="dateDebutMin" required><br><br>
+
+            <label for="dateDebutMax" >au plus tard</label>
+            <input type="date" id="dateDebutMax" name="dateDebutMax" required><br><br>
+        
+        </fieldset>
+
+        <fieldset>
+
+            <legend>DATE DE FIN</legend>
+            
+            <label for="dateFinMin" >au plus tôt</label>
+            <input type="date" id="dateFinMin" name="dateFinMin" required><br><br>
+
+            <label for="dateFinmax" >au plus tard</label>
+            <input type="date" id="dateFinMax" name="dateFinMax" required><br><br>
+        
+        </fieldset>
+
+        <fieldset>
+
+            <legend>Autres</legend>
+        
+            <label for="typesDeStages">TYPES DE STAGE AUTORISES</label>
+            <textarea id="typesDeStages" name="typesDeStages" required></textarea> <br><br>
+            
+            <label for="responsableStage" >Responsable des stages</label>
+            <input type="text" id="responsableStage" name="responsableStage" required><br><br>
+
+            <label for="signataireConvention" >Responsable de la signature des conventions</label>
+            <input type="text" id="signataireConvention" name="signataireConvention" required><br><br>
+                
+        </fieldset>
+
+        <button style="align-content:center" type="submit">ENREGISTRER</button>            
+
+    </form>
+
+</body>
+
+</html>
